@@ -18,7 +18,8 @@ if( isset($_POST['email']) && isset($_POST['password'])  ){
             $id = $row['id'];
 
             $time = time();
-            $query = " UPDATE usuarios SET acceso = '$time' WHERE id='id'";
+
+            $query = " UPDATE usuarios SET acceso = '$time' WHERE id='$id'";
             $conexion -> query($query);
 
             $_SESSION['id'] = $id;

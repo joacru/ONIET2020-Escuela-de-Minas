@@ -4,6 +4,7 @@
     //session_start();
     include('check_session.php');
     include('actions/data_connect.php');
+    date_default_timezone_set('America/Buenos_Aires');
 
     if($user_online){
 
