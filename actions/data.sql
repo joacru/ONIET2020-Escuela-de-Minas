@@ -1,0 +1,27 @@
+CREATE DATABASE ONIET2020; 
+USE ONIET2020;
+
+
+CREATE TABLE usuarios(
+
+id INT(255) NOT NULL AUTO_INCREMENT, 
+email VARCHAR(255) NOT NULL,
+password VARCHAR(255) NOT NULL,
+name VARCHAR(255) NOT NULL,
+apellido VARCHAR(255) NOT NULL,
+domicilio VARCHAR(255) NOT NULL,
+pais VARCHAR(255) NOT NULL,                                     /* codigo pais */
+acceso INT(255) NOT NULL,
+
+CONSTRAINT pk_id PRIMARY KEY(id)
+
+); 
+
+CREATE TABLE paises(
+
+id INT(255) NOT NULL AUTO_INCREMENT, 
+codigo VARCHAR(255) NOT NULL,
+name VARCHAR(255) NOT NULL,
+
+CONSTRAINT pk_id PRIMARY KEY(id)
+);

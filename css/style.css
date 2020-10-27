@@ -1,0 +1,15 @@
+.login-box{
+  margin: auto;
+  padding: 50px;
+  width: 60%;
+}
+
+.dashboard-box{
+  padding: 20px;
+}
+
+.logout-button{
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+}
