@@ -1,0 +1,14 @@
+Requisitos previos:
+1. XAMPP
+2. Node.js
+
+Instrucciones:
+1. Colocar esta carpeta en C:\xampp\htdocs
+2. Ir al directorio ./js y correr el comando:
+npm i && npm run build
+3. Abrir el XAMPP e iniciar los servicios de Apache y MySQL
+4. Ingresar a la url localhost/phpmyadmin
+5. Crear una base de datos llamada oniet2020
+6. Ir a la pestaña de importar y seleccionar el archivo de esta carpeta llamado oniet2020.sql
+7. Ir a la url localhost. El sistema debería funcionar
+8. Ingresar con el correo "correo@test.com" y la contraseña 1234todo
