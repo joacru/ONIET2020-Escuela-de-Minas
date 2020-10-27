@@ -3,21 +3,26 @@
     const year = d.getUTCFullYear(),
       month = d.getUTCMonth(),
       day = d.getUTCDate();
-    const digits = (n: number, s: string) => '0'.repeat(n - s.length) + s;
+    const digits = (n: number, s: any) => '0'.repeat(n - String(s).length) + s;
 
-    return `${digits(2, String(day))}/${digits(2, String(month))}/${digits(
-      4,
-      String(year)
-    )}`;
+    return `${digits(2, day)}/${digits(2, month)}/${digits(4, year)}`;
   };
+
+  interface Payload {
+    Date: string;
+    Confirmed: number;
+    Active: number;
+    Deaths: number;
+    Recovered: number;
+  }
 </script>
 
 <script lang="ts">
   export let country: string | undefined;
 
   let loading = true;
-  let historicData: any[] = [];
-  let currentData: any | null = null;
+  let historicData: Payload[] = [];
+  let currentData: Payload | null = null;
   $: {
     if (country) {
       loading = true;
